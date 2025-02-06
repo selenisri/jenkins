@@ -25,6 +25,21 @@
         <version>7.4.0</version> <!-- Check for the latest version -->
         <scope>test</scope>
     </dependency>
-</dependencies>
+  </dependencies>
   
+  <build>
+    <plugins>
+      <!-- Surefire plugin for running tests -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M5</version> <!-- or latest version -->
+        <configuration>
+          <includes>
+            <include>**/*Test.java</include> <!-- This will include all test classes -->
+          </includes>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
